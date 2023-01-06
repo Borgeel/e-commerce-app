@@ -15,7 +15,7 @@ const Home = ({ products, bannerData }) => {
           Steel worth every penny and more!
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row justify-between p-10">
+      <div className="flex flex-col lg:flex-row justify-between items-center p-10">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}

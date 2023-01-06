@@ -20,19 +20,19 @@ const HeroBanner = ({ heroBanner }) => {
         alt="knife"
         width={450}
         height={450}
-        className="object-cover w-full lg:absolute lg:w-6/12 top-60 right-40 z-10 mt-5"
+        className="object-cover w-full lg:absolute lg:w-6/12 top-36 right-40 z-5 mt-5"
       />
       <div className="p-2 flex-1 lg:flex-col lg:self-end mb-8 ml-5">
         <Link href={`/product/${heroBanner.product}`}>
           <button
             type="button"
-            className="lg:absolute bottom-1/2 right-10 z-30 self-center bg-red-600  text-white rounded-2xl p-3 mb-10 cursor-pointer font-semibold hover:scale-105"
+            className="lg:absolute bottom-32 right-16 z-30 self-center bg-red-600  text-white rounded-2xl p-2 my-10 cursor-pointer font-semibold hover:scale-105 transition-all duration-300"
           >
             {heroBanner.buttonText}
           </button>
         </Link>
         <div>
-          <h5 className="text-3xl text-slate-900 font-semibold mb-2">
+          <h5 className="text-3xl text-blue-900 font-semibold mb-2">
             Description
           </h5>
           <p> {heroBanner.desc} </p>
