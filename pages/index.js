@@ -7,11 +7,15 @@ const Home = ({ products, bannerData }) => {
   return (
     <>
       <HeroBanner heroBanner={bannerData[1]} />
-      <div className="products-heading">
-        <h2>Best Selling Products</h2>
-        <p>Steel worth every penny and more!</p>
+      <div className="text-center mt-10 p-10">
+        <h2 className="font-extrabold text-5xl m-5 text-blue-900">
+          Bestseller Products
+        </h2>
+        <p className="text-2xl font-semibold">
+          Steel worth every penny and more!
+        </p>
       </div>
-      <div className="products-container">
+      <div className="flex flex-col lg:flex-row justify-between p-10">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}

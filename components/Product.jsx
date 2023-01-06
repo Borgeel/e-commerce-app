@@ -5,18 +5,20 @@ import { urlFor } from "../lib/client";
 
 const Product = ({ product: { image, name, price, slug } }) => {
   return (
-    <div>
+    <div className="flex flex-row cursor-pointer hover:scale-105 p-2 m-2 rounded-3xl bg-neutral-300 hover:bg-red-500 transition-all duration-500">
       <Link href={`/product/${slug.current}`}>
-        <div className="product-card">
+        <div className="flex flex-col justify-center h-42 w-42">
           <img
             src={urlFor(image && image[0])}
             widh={250}
             height={250}
             alt="product"
-            className="product-image"
+            className="object-cover"
           />
-          <p className="product-name"> {name} </p>
-          <p className="product-price"> ${price} </p>
+          <div className="ml-2">
+            <p className="font-semibold text-xl"> {name} </p>
+            <p className="font-mono"> ${price} </p>
+          </div>
         </div>
       </Link>
     </div>
