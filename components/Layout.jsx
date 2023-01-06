@@ -5,7 +5,7 @@ import { Navbar, Footer } from "../components";
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <div className="p-1">
       <Head>
         <title>Knife Store</title>
       </Head>
