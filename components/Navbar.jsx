@@ -4,7 +4,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 
 const Navbar = () => {
   return (
-    <div className="navbar-container">
+    <div className="hidden lg:flex justify-between items-center p-1 mx-3">
       <p className="logo">
         <Link href="/"> Morakniv Knives </Link>
       </p>
