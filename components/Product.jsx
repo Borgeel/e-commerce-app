@@ -9,7 +9,7 @@ const Product = ({ product: { image, name, price, slug } }) => {
       <Link href={`/product/${slug.current}`}>
         <div className="flex flex-col justify-center h-42 w-42 ">
           <img
-            src={urlFor(image && image[0])}
+            src={urlFor(image[0]).url()}
             width={270}
             height={270}
             alt="product"

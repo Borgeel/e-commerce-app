@@ -26,7 +26,7 @@ const HeroBanner = ({ heroBanner }) => {
         <Link href={`/product/${heroBanner.product}`}>
           <button
             type="button"
-            className="lg:absolute bottom-32 right-16 z-30 self-center bg-red-600  text-white rounded-2xl p-2 my-10 cursor-pointer font-semibold hover:scale-105 transition-all duration-300"
+            className="lg:absolute bottom-32 right-16 z-20 self-center bg-red-600  text-white rounded-2xl p-2 my-10 cursor-pointer font-semibold hover:scale-105 transition-all duration-300"
           >
             {heroBanner.buttonText}
           </button>
