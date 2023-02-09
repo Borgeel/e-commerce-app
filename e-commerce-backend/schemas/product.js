@@ -30,6 +30,14 @@ export default {
       name: 'price',
       title: 'Price',
       type: 'number',
+      validation: (Rule) => Rule.positive().precision(2),
+      options: {
+        decimalScale: 2,
+        fixedDecimalScale: true,
+        allowNegative: false,
+        decimalSeparator: ',',
+        thousandSeparator: '.',
+      },
     },
     {
       name: 'details',

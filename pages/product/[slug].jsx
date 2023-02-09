@@ -20,9 +20,11 @@ const ProductDetails = ({ product, products }) => {
   return (
     <div>
       <div className="flex flex-col lg:flex-row">
-        <div className="p-6">
+        <div>
           <img
             src={urlFor(image && image[index]).url()}
+            height={1300}
+            width={1300}
             alt="product"
             className="object-cover"
           />
