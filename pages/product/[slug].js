@@ -13,7 +13,14 @@ import { urlFor, client } from "../../lib/client";
 
 const ProductDetails = ({ product, products }) => {
   const [index, setIndex] = useState(0);
-  const { increaseQuantity, decreaseQuantity, quantity } = useStateContext();
+  const { increaseQuantity, decreaseQuantity, quantity, onAdd, setShowCart } =
+    useStateContext();
+
+  const buyNowHandler = () => {
+    onAdd(product, quantity);
+
+    setShowCart(true);
+  };
 
   const { image, name, details, price } = product;
 
@@ -83,8 +90,19 @@ const ProductDetails = ({ product, products }) => {
             </p>
           </div>
           <div className="flex justify-center mt-10">
-            <Btn text={"Add to Cart"} variant={false} product={product} />
-            <Btn text={"Buy Now"} variant={true} />
+            <Btn
+              text={"Add to Cart"}
+              variant={false}
+              product={product}
+              onClick={() => onAdd(product, quantity)}
+            />
+            <Btn
+              text={"Buy Now"}
+              variant={true}
+              buyNow={buyNowHandler}
+              product={product}
+              onClick={() => buyNowHandler()}
+            />
           </div>
         </div>
       </div>

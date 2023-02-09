@@ -4,6 +4,7 @@ import { BsBagCheckFill } from "react-icons/bs";
 
 import { useStateContext } from "../context/StateContext";
 import { runConfetti } from "../lib/utils";
+import { Btn } from "../components";
 
 const Success = () => {
   const { setCartItems, setTotalPrice, setTotalQuantity } = useStateContext();
@@ -30,12 +31,19 @@ const Success = () => {
           </a>{" "}
         </p>
         <Link href="/">
-          <button
+          <Btn
+            variant={true}
+            text="Continue Shopping"
+            onClick={() => {
+              console.log("You clicked success button");
+            }}
+          />
+          {/* <button
             type="button"
             className="cursor-pointer bg-red-600 rounded-xl p-2 transition-all duration-500 hover:scale-105 text-white mt-3"
           >
             Continue Shopping
-          </button>
+          </button> */}
         </Link>
       </div>
     </div>

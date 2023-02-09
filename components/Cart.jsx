@@ -4,7 +4,6 @@ import {
   AiOutlineMinus,
   AiOutlinePlus,
   AiOutlineLeft,
-  AiOutLineShopping,
   AiOutlineShopping,
 } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
@@ -13,6 +12,7 @@ import toast from "react-hot-toast";
 import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 import getStripe from "../lib/getStripe";
+import Btn from "./Btn";
 
 const Cart = () => {
   const cartRef = useRef();
@@ -71,13 +71,12 @@ const Cart = () => {
               Your shopping bag is empty.
             </h3>
             <Link href="/">
-              <button
-                type="button"
+              <Btn
+                text="Continue Shopping"
+                variant={true}
                 onClick={() => setShowCart(false)}
                 className="cursor-pointer border-2 bg-red-600 rounded-xl p-2 transition-all duration-500 hover:scale-105 text-white mt-3"
-              >
-                Continue Shopping
-              </button>
+              />
             </Link>
           </div>
         )}
@@ -114,7 +113,7 @@ const Cart = () => {
                   >
                     <h5 className="text-2xl font-semibold"> {item?.name} </h5>
                     <h4 className="text-2xl font-bold whitespace-nowrap">
-                      $ {item.price}
+                      $ {item?.price}
                     </h4>
                   </div>
                   <div className="flex justify-end mt-auto mb-11 w-11/12">
@@ -123,7 +122,7 @@ const Cart = () => {
                         <span
                           className="cursor-pointer border-2 border-gray-600 rounded-md p-1 hover:bg-gray-300 hover:scale-105 transition-all duration-500"
                           onClick={() =>
-                            toggleCartItemQuantity(item._id, "decrement")
+                            toggleCartItemQuantity(item?._id, "decrement")
                           }
                         >
                           <AiOutlineMinus size={20} />
@@ -137,7 +136,7 @@ const Cart = () => {
                         <span
                           className="border-2 border-gray-600 cursor-pointer rounded-md p-1 hover:bg-gray-300 hover:scale-105 transition-all duration-500"
                           onClick={() =>
-                            toggleCartItemQuantity(item._id, "increment")
+                            toggleCartItemQuantity(item?._id, "increment")
                           }
                         >
                           <AiOutlinePlus size={20} />
@@ -158,7 +157,8 @@ const Cart = () => {
 
             <div className="w-9/12 bg-red-600 self-center mt-5 text-center rounded-3xl">
               <button
-                type="button"
+                text="Pay With Stripe"
+                variant={true}
                 className="border-none text-white capitalize text-lg w-full p-2"
                 onClick={handleCheckout}
               >
