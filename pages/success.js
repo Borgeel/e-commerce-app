@@ -20,7 +20,7 @@ const Success = () => {
     <div className="items-center mt-10 bg-neutral-200 rounded-xl w-1/2 ml-auto mr-auto p-7">
       <div className="flex flex-col justify-center items-center content-center gap-7">
         <p className="">
-          <BsBagCheckFill size={70} />
+          <BsBagCheckFill size={70} color="green" />
         </p>
         <h2 className="text-3xl font-bol">Blagosiljam</h2>
         <p>
