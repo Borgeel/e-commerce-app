@@ -9,7 +9,7 @@ const Navbar = () => {
   const { showCart, setShowCart, totalQuantity } = useStateContext();
 
   return (
-    <div className="hidden lg:flex justify-between items-center p-1 mx-3">
+    <div className="flex lg:flex justify-between items-center p-1 mx-3">
       <p className="text-3xl font-extrabold">
         <Link href="/"> Morakniv Knives </Link>
       </p>

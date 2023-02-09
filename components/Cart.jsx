@@ -51,7 +51,7 @@ const Cart = () => {
       ref={cartRef}
       className="w-full bg-neutral-900 fixed right-0 top-0 z-50 transition-all ease-in-out duration-700 bg-opacity-30"
     >
-      <div className="h-screen w-1/2 bg-neutral-100 float-right px-5 py-3 relative">
+      <div className="h-screen w-9/12 lg:w-1/2 bg-neutral-100 float-right px-5 py-3 relative">
         <button
           type="button"
           className="flex items-center text-center text-xl font-semibold cursor-pointer gap-1 ml-2 border-none bg-transparent"

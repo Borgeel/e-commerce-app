@@ -33,7 +33,7 @@ const ProductDetails = ({ product, products }) => {
             height={1300}
             width={1300}
             alt="product"
-            className="object-cover"
+            className="ml-auto mr-auto object-cover w-8/12"
           />
         </div>
 
